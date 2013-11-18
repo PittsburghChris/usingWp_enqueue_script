@@ -1,6 +1,5 @@
 
-
-ADDING JAVASCRIPT
+// ADDING JAVASCRIPT
 
  function wcg_scripts()
  {
@@ -15,7 +14,7 @@ ADDING JAVASCRIPT
 
 
 
-ADDING STYLES
+// ADDING STYLES
 
  function wcg_styles()
  {
