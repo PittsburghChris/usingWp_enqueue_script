@@ -4,7 +4,8 @@
  function wcg_scripts()
  {
 	// Register the script like this for a theme:
-    wp_register_script( 'custom-script', get_template_directory_uri() . '/js/custom-script.js', array( 'jquery', 'jquery-ui-core' ), '20131118', true );  
+        // wp_register_script( $handle, $src, $deps, $ver, $in_footer );
+        wp_register_script( 'custom-script', get_template_directory_uri() . '/js/custom-script.js', array( 'jquery', 'jquery-ui-core' ), '20131118', true );  
 	// use the array to grab a library already included in WordPress, in this case 'jquery' and 'jquery-ui-core'
 
 	// For either a plugin or a theme, you can then enqueue the script:
@@ -20,7 +21,8 @@
  {
 	// Register the style like this for a theme:
 	wp_register_style( 'custom-style', get_template_directory_uri() . '/css/custom-style.css', array(), '20131118', 'all' );
-
+           // what about get_stylesheet_directory? 
+           //http://codex.wordpress.org/Function_Reference/get_stylesheet_directory_uri
 	// For either a plugin or a theme, you can then enqueue the style:
 	wp_enqueue_style( 'custom-style' );
  }
