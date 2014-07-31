@@ -1,7 +1,7 @@
 
 // ADDING JAVASCRIPT
 
- function wcg_scripts()
+ function fp_scripts()
  {
 	// Register the script like this for a theme:
         // wp_register_script( $handle, $src, $deps, $ver, $in_footer );
@@ -11,22 +11,27 @@
 	// For either a plugin or a theme, you can then enqueue the script:
 	wp_enqueue_script( 'custom-script' );
  }
- add_action( 'wp_enqueue_scripts', 'wcg_scripts' );
+ // add_action( $tag, $function_to_add, $priority, $accepted_args );
+ add_action( 'wp_enqueue_scripts', 'fp_scripts' );
 
 
 
 // ADDING STYLES
 
- function wcg_styles()
+ function fp_styles()
  {
 	// Register the style like this for a theme:
-	wp_register_style( 'custom-style', get_template_directory_uri() . '/css/custom-style.css', array(), '20131118', 'all' );
-           // what about get_stylesheet_directory? 
-           //http://codex.wordpress.org/Function_Reference/get_stylesheet_directory_uri
+	// wp_register_style( $handle, $src, $deps, $ver, $media ); note "$media" instead of $in_footer
+		// $media parameter can take 'all', 'screen', 'handheld', or 'print' values
+	wp_register_style( 'custom-style', get_stylesheet_directory() . '/css/custom-style.css', array(), '20131118', 'all' );
+           // note replacing get_template_directory_uri with get_stylesheet_directory_uri
+           // http://codex.wordpress.org/Function_Reference/get_stylesheet_directory_uri
+           // http://codex.wordpress.org/Child_Themes
+           	// get_stylesheet_directory() points to your child theme's directory (not the parent theme's directory).
 	// For either a plugin or a theme, you can then enqueue the style:
 	wp_enqueue_style( 'custom-style' );
  }
- add_action( 'wp_enqueue_scripts', 'wcg_styles' );
+ add_action( 'wp_enqueue_scripts', 'fp_styles' );
 
 
 // from http://wp.tutsplus.com/articles/how-to-include-javascript-and-css-in-your-wordpress-themes-and-plugins/
