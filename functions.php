@@ -28,6 +28,8 @@
            // http://codex.wordpress.org/Function_Reference/get_stylesheet_directory_uri
            // http://codex.wordpress.org/Child_Themes
            	// get_stylesheet_directory() points to your child theme's directory (not the parent theme's directory).
+           // http://www.wpbeginner.com/wp-tutorials/how-to-properly-add-javascripts-and-styles-in-wordpress/
+           	// If you are working with a child theme, then use get_stylesheet_directory_uri()
 	// For either a plugin or a theme, you can then enqueue the style:
 	wp_enqueue_style( 'custom-style' );
  }
