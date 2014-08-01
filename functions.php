@@ -35,4 +35,6 @@
 
 
 // from http://wp.tutsplus.com/articles/how-to-include-javascript-and-css-in-your-wordpress-themes-and-plugins/
+// Agrument that you *should not* move scripts to the footer 
+// --> http://code.tutsplus.com/articles/a-beginners-guide-to-enqueuing-jquery--wp-30615
 // Also - load scripts only on plugin pages http://codex.wordpress.org/Function_Reference/wp_enqueue_script#Load_scripts_only_on_plugin_pages
